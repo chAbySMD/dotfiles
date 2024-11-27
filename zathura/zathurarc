@@ -1,0 +1,14 @@
+set window-title-basename "true"
+set selection-clipboard "clipboard"
+
+#
+# Color theme
+#
+include themes/catppuccin-mocha
+set smooth-scroll "true"
+
+#
+# Startup options
+#
+set adjust-open width
+set recolor true

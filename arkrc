@@ -1,0 +1,12 @@
+[Extraction]
+closeAfterExtraction=true
+openDestinationFolderAfterExtraction=true
+
+[General]
+LockSidebar=true
+ShowSidebar=false
+
+[MainWindow]
+MenuBar=Disabled
+StatusBar=Disabled
+ToolBarsMovable=Disabled
