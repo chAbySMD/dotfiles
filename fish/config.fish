@@ -18,8 +18,7 @@ alias g="git"
 alias m="micro"
 
 alias v="nvim"
-alias nv="NVIM_APPNAME=nvim-nvchad nvim"
-alias nm="NVIM_APPNAME=nvim-mini nvim"
+alias nc="NVIM_APPNAME=nvim-chaby nvim"
 
 alias ls="eza --icons=always --no-time"
 
