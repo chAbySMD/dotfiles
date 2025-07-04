@@ -1,0 +1,3 @@
+[submodule "nvim-chaby"]
+	path = nvim-chaby
+	url = https://github.com/chAbySMD/nvim-chaby
