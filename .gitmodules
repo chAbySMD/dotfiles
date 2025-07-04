@@ -1,3 +1,11 @@
 [submodule "nvim-chaby"]
 	path = nvim-chaby
 	url = https://github.com/chAbySMD/nvim-chaby
+	branch = native
+[submodule "nvim-coc"]
+	path = nvim-coc
+	url = https://github.com/chAbySMD/nvim-chaby
+	branch = coc
+[submodule "tmux"]
+	path = tmux
+	url = https://github.com/chAbySMD/tmux-config
