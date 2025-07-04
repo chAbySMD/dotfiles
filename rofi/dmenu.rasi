@@ -1,0 +1,180 @@
+
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun,run,filebrowser";
+    show-icons:                 true;
+    display-drun:               "  Apps";
+    display-run:                "  Run";
+    display-filebrowser:        "  Files";
+    display-window:             "  Windows";
+	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+	window-format:              "{w} · {c} · {t}";
+}
+
+/*****----- Global Properties -----*****/
+@import "share/colors.rasi"
+
+#window {
+    background-color: @background;
+		y-offset: calc(-56px - 64px);
+    border: 0;
+		padding: 90px 20px 20px 20px;
+		width: 30%;
+		transparency: "real";
+		border-radius: 44px;
+}
+
+#mainbox {
+    border: 0;
+    padding: 0;
+    spacing: 16px;
+}
+
+#message {
+    border: 2px 0px 0px;
+    border-color: @border-color;
+    padding: 1px;
+}
+
+#textbox {
+    text-color: @foreground;
+}
+
+#inputbar {
+    children:   [ entry,case-indicator ];
+		background-color: #ff0000;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       3;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   true;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     16px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      2px 0px 0px;
+    border-radius:               0px;
+    border-color:                @border-color;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+#element {
+    border: 0;
+    padding: 16px 24px;
+		border-radius: 20px;
+		spacing: 24px;
+}
+
+#element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+#element-icon {
+	size: 24px;
+}
+
+#element.normal.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+#element.normal.urgent {
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+}
+
+#element.normal.active {
+    background-color: @active-background;
+    text-color: @active-foreground;
+}
+
+#element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+#element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color: @selected-urgent-foreground;
+}
+
+#element.selected.active {
+    background-color: @selected-active-background;
+    text-color: @selected-active-foreground;
+}
+
+#element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color: @alternate-normal-foreground;
+}
+
+#element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color: @alternate-urgent-foreground;
+}
+
+#element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color: @alternate-active-foreground;
+}
+
+#scrollbar {
+    handle-width: 16px;
+    handle-color: @selected;
+    border-radius: 16px;
+    background-color: @background-alt;
+}
+
+#handle {
+    border-radius: 16px;
+}
+
+#sidebar {
+    border: 2px 0px 0px;
+    border-color: @border-color;
+}
+
+#button {
+    text-color: @normal-foreground;
+}
+
+#button.selected {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+#inputbar {
+    spacing: 0;
+    text-color: @normal-foreground;
+		background-color: @background-alt;
+		padding: 12px;
+		border-radius: 24px;
+}
+#prompt {
+    spacing: 0;
+    text-color: @normal-foreground;
+		background-color: transparent;
+}
+#entry {
+    spacing: 0;
+    text-color: @normal-foreground;
+		background-color: transparent;
+		horizontal-align: 0.5;
+}
+
+#case-indicator {
+    spacing: 0;
+    text-color: @normal-foreground;
+		background-color: transparent;
+}

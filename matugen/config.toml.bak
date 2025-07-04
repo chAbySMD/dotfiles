@@ -1,0 +1,94 @@
+[config]
+reload_apps = true
+
+[config.reload_apps_list]
+alacritty = true
+gtk_theme = true
+
+[config.wallpaper]
+command = "swww"
+arguments = [ "img", "-t", "outer", "--transition-duration", "1.5", "--transition-step", "255", "--transition-fps", "60", "-f", "Nearest",]
+set = true
+
+[templates.telegram]
+input_path = "~/.config/matugen/templates/telegram.tdesktop-theme"
+output_path = "~/.config/telegram/theme.tdesktop-theme"
+
+[templates.lualine_colors]
+input_path = "~/.config/matugen/templates/lualine_colors.lua"
+output_path = "~/.config/nvim-coc/lua/assets/lualine_colors.lua"
+
+[templates.alacritty]
+input_path = "~/.config/matugen/templates/alacritty.toml"
+output_path = "~/.config/alacritty/custom_theme.toml"
+
+[templates.gtk3]
+input_path = "~/.config/matugen/templates/colors.css"
+output_path = "~/.config/gtk-3.0/colors.css"
+
+[templates.gtk4]
+input_path = "~/.config/matugen/templates/colors.css"
+output_path = "~/.config/gtk-4.0/colors.css"
+
+[templates.pywaljson]
+input_path = "~/.config/matugen/templates/pywal-colors.json"
+output_path = "~/.cache/wal/colors.json"
+post_hook = "pywalfox update &"
+
+[templates.pywalsh]
+input_path = "~/.config/matugen/templates/colors.sh"
+output_path = "~/.cache/wal/colors.sh"
+post_hook = "walogram -B > /dev/null 2>&1 &"
+
+[templates.pywalwalfile]
+input_path = "~/.config/matugen/templates/wal"
+output_path = "~/.cache/wal/wal"
+
+[templates.rofi]
+input_path = "~/.config/matugen/templates/colors-rofi.rasi"
+output_path = "~/.cache/wal/colors-rofi.rasi"
+
+[templates.zathura]
+input_path = "~/.config/matugen/templates/colors-zathura"
+output_path = "~/.config/zathura/zathurarc"
+
+[templates.yazi]
+input_path = "~/.config/matugen/templates/colors-yazi.toml"
+output_path = "~/.config/yazi/theme.toml"
+
+[templates.hyprland]
+input_path = "~/.config/Ax-Shell/config/matugen/templates/hyprland-colors.conf"
+output_path = "~/.config/Ax-Shell/config/hypr/colors.conf"
+
+[templates.ax-shell]
+input_path = "~/.config/Ax-Shell/config/matugen/templates/ax-shell.css"
+output_path = "~/.config/Ax-Shell/styles/colors.css"
+post_hook = "fabric-cli exec ax-shell 'app.set_css()' &"
+
+[config.custom_colors.red]
+color = "#FF0000"
+blend = true
+
+[config.custom_colors.green]
+color = "#00FF00"
+blend = true
+
+[config.custom_colors.yellow]
+color = "#FFFF00"
+blend = true
+
+[config.custom_colors.blue]
+color = "#0000FF"
+blend = true
+
+[config.custom_colors.magenta]
+color = "#FF00FF"
+blend = true
+
+[config.custom_colors.cyan]
+color = "#00FFFF"
+blend = true
+
+[config.custom_colors.white]
+color = "#FFFFFF"
+blend = true

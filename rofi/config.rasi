@@ -1,0 +1,8 @@
+configuration {
+	font: "Zed Sans 14";
+	location: 2;
+	fixed-nul-lines: true;
+	show-icons: true;
+}
+
+@theme "dmenu"

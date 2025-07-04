@@ -1,0 +1,22 @@
+[general]
+live_config_reload = true
+import = ["./custom_theme.toml"]
+
+[window]
+padding = {x = 10, y = 10}
+decorations = "None"
+startup_mode = "Maximized"
+opacity = 0.97
+
+[font]
+size = 14
+
+[font.normal]
+family = "ZedMono Nerd Font"
+style = "Medium"
+
+[terminal]
+shell = "/usr/bin/zsh"
+
+[mouse]
+hide_when_typing = true

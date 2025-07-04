@@ -1,0 +1,222 @@
+@import "/home/chaby/.config/waybar/waybar-colors.css";
+
+* {
+  font-family:
+    Zed Sans,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: @window_fg_color;
+}
+
+window#waybar {
+  background-color: transparent;
+  border-bottom: transparent;
+  color: @window_fg_color;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+}
+
+window#waybar.chromium {
+  border: none;
+}
+
+button {
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+}
+
+#workspaces {
+  background-color: #030303;
+  border-radius: 100px;
+  padding: 14px 8px;
+}
+
+#workspaces button {
+  padding: 0px;
+  margin: 0 4px;
+  background-color: @accent_bg_color;
+  border-radius: 100px;
+  box-shadow: 0 0 transparent;
+  min-width: 8px;
+  min-height: 0px;
+}
+
+#workspaces button * {
+  font-size: 0px;
+  padding: 0;
+  margin: 0;
+}
+
+#workspaces button.active {
+  background-color: @accent_bg_color;
+  min-width: 35px;
+}
+#workspaces button.empty {
+  background-color: @window_bg_color;
+}
+
+#workspaces button.active * {
+  color: @accent_fg_color;
+}
+
+#workspaces button:hover {
+  background: @accent_bg_color;
+  color: @accent_fg_color;
+}
+
+#clock,
+#battery,
+#language,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#custom-power,
+#mpd {
+  padding: 8px 16px;
+  background-color: #030303;
+  border-radius: 1200px;
+  transition-property: background-color, color;
+  transition-duration: 0.25s;
+}
+
+#custom-power {
+  padding-left: 12px;
+  padding-right: 7px;
+}
+#custom-power:hover {
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#clock {
+}
+#clock:hover {
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+}
+
+#battery {
+  padding-right: 24px;
+}
+#battery:hover {
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+}
+
+#battery.charging,
+#battery.plugged {
+  padding-right: 16px;
+  color: @accent_bg_color;
+}
+#battery.charging:hover,
+#battery.plugged:hover {
+  color: @window_bg_color;
+}
+
+@keyframes blink {
+  to {
+  }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#power-profiles-daemon {
+  padding-right: 15px;
+}
+
+#power-profiles-daemon.performance {
+}
+
+#power-profiles-daemon.balanced {
+}
+
+#power-profiles-daemon.power-saver {
+}
+
+label:focus {
+}
+
+#pulseaudio {
+  padding-right: 18px;
+}
+
+#pulseaudio.muted {
+}
+
+#wireplumber {
+}
+
+#wireplumber.muted {
+}
+
+#tray {
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+#language {
+  padding: 10px 16px;
+}
+#language:hover {
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+}
